@@ -2,12 +2,20 @@ import React, { useState, useEffect} from "react";
 import './App.css';
 
 
-function item() {
+function ItemDetail() {
 
-  useEffect(() => {},[]);
+  useEffect(() => {
+    fetchItem();
+  },[]);
 
   const [item, setItem] = useState([]);
 
+  const fetchItem = async () => {
+    const fetchItem = await fetch('https://fakestoreapi.com/products')
+    const item = await fetchItem.json();
+
+    console.log(item);
+  };
 
   return (
     <div>
@@ -16,4 +24,4 @@ function item() {
   );
 }
 
-export default Item;
+export default ItemDetail;

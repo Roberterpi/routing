@@ -4,13 +4,10 @@ import './App.css';
 
 function item() {
 
-  useEffect(() => {
-    fetchItems();
-  },[]);
+  useEffect(() => {},[]);
 
   const [item, setItem] = useState([]);
 
-  const fetchItem = async () => {};
 
   return (
     <div>

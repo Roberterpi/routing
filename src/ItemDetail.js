@@ -2,7 +2,7 @@ import React, { useState, useEffect} from "react";
 import './App.css';
 
 
-function ItemDetail() {
+function ItemDetail({ match }) {
 
   useEffect(() => {
     fetchItem();

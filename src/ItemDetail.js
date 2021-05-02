@@ -1,8 +1,8 @@
 import React, { useState, useEffect} from "react";
 import './App.css';
-import {Link} from 'react-router-dom';
 
-function Shop() {
+
+function item() {
 
   useEffect(() => {
     fetchItems();
@@ -10,10 +10,7 @@ function Shop() {
 
   const [item, setItem] = useState([]);
 
-  const fetchItem = async () => {
- 
-  };
-
+  const fetchItem = async () => {};
 
   return (
     <div>
@@ -22,4 +19,4 @@ function Shop() {
   );
 }
 
-export default Shop;
+export default Item;

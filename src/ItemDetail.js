@@ -10,22 +10,14 @@ function Shop() {
 
   const [item, setItem] = useState([]);
 
-  const fetchItems = async () => {
-    const data = await fetch('https://fakestoreapi.com/products');
-
-    const items = await data.json();
-    console.log(items.items);
-    setItems(items.items);
+  const fetchItem = async () => {
+ 
   };
 
 
   return (
     <div>
-      {items.map(item => (
-        <h1 key={item.itemid}>
-          <Link to={`/shop/${item.itemid}`}>{item.name}</Link>
-        </h1>
-      ))}
+      <h1>Item</h1>
     </div>
   );
 }

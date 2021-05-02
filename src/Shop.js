@@ -7,17 +7,22 @@ function Shop() {
     fetchItems();
   },[]);
 
+  const [items, setItems] = useState([]);
+
   const fetchItems = async () => {
     const data = await fetch('https://fakestoreapi.com/products');
 
     const items = await data.json();
-    console.log(items);
-  }
+    console.log(items.items);
+    setItems(items.items);
+  };
 
 
   return (
     <div>
-      <h1>Shop</h1>
+      {items.map(item => (
+        <h1>{item.name}</h1>
+      ))}
     </div>
   );
 }

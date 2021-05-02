@@ -8,7 +8,7 @@ function Shop() {
     fetchItems();
   },[]);
 
-  const [items, setItems] = useState([]);
+  const [item, setItem] = useState([]);
 
   const fetchItems = async () => {
     const data = await fetch('https://fakestoreapi.com/products');
